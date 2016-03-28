@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="450.0" styleClass=".root" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Controller">
+   <children>
+      <BarChart fx:id="barChart" prefHeight="100.0" prefWidth="450.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Label fx:id="labelSongPlaying" alignment="CENTER" prefHeight="25.0" prefWidth="450.0" textAlignment="CENTER" />
+      <AnchorPane prefHeight="37.0" prefWidth="450.0">
+         <children>
+            <Button fx:id="buttonPrevious" layoutX="79.0" layoutY="2.0" mnemonicParsing="false" onAction="#previous" prefHeight="25.0" prefWidth="82.0" text="previous" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="79.0" AnchorPane.rightAnchor="289.0" AnchorPane.topAnchor="2.0" />
+            <Button fx:id="buttonPlay" contentDisplay="RIGHT" layoutX="184.0" layoutY="2.0" mnemonicParsing="false" onAction="#playPause" prefHeight="25.0" prefWidth="82.0" text="play" textAlignment="CENTER" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="184.0" AnchorPane.rightAnchor="184.0" AnchorPane.topAnchor="2.0" />
+            <Button fx:id="buttonNext" contentDisplay="RIGHT" layoutX="289.0" layoutY="2.0" mnemonicParsing="false" onAction="#next" prefHeight="25.0" prefWidth="82.0" text="naxt" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="289.0" AnchorPane.rightAnchor="79.0" AnchorPane.topAnchor="2.0" />
+         </children>
+      </AnchorPane>
+      <ProgressBar fx:id="progress" prefWidth="450.0" progress="0.0" />
+      <ListView fx:id="listViewPlayList" onDragEntered="#listViewOnDragEntered" onMouseClicked="#mouseClicked" prefHeight="325.0" prefWidth="450.0" stylesheets="@../css/style.css" />
+   </children>
+</VBox>
